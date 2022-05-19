@@ -11,13 +11,13 @@ namespace yazlab2.Controllers
 {
     public class DatabaseController : Controller
     {
-        string jsn = "./carsproject-343312-d8e6de01b9cb.json";
+        string jsn = "yourjson";
         string projeId;
         private FirestoreDb firestoreDb;
         public DatabaseController()
         {
             Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", jsn);
-            projeId = "carsproject-343312";
+            projeId = "projectname";
             firestoreDb = FirestoreDb.Create(projeId);
 
         }
@@ -52,61 +52,6 @@ namespace yazlab2.Controllers
             await collectionReference.AddAsync(model);
             return RedirectToAction(nameof(Index));
         }
-        /*
-        public async Task<List<DataModel>> VeriGetir()
-        {
-
-            try
-            {
-                Query query = firestoreDb.Collection("aracverileri");
-                QuerySnapshot querySnapshot = await query.GetSnapshotAsync();
-                List<DataModel> datalist = new List<DataModel>();
-
-                foreach (DocumentSnapshot documentSnapshot in querySnapshot.Documents)
-                {
-                    if (documentSnapshot.Exists)
-                    {
-                        Dictionary<string, object> dic = documentSnapshot.ToDictionary();
-                        string json = JsonConvert.SerializeObject(dic);
-                        DataModel data = JsonConvert.DeserializeObject<DataModel>(json);
-                        data.Id = documentSnapshot.Id;
-                        datalist.Add(data);
-                    }
-                }
-                return datalist;
-
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
-
-
-
-
-        }
-    
-        /*
-        public async Task<List<DataModel>> VeriEkle()
-        {
-            CollectionReference docref = firestoreDb.Collection("aracverileri");
-            Query query = firestoreDb.Collection("aracverileri");
-          
-
-            DataModel model = new DataModel
-            {
-                Id = "20",
-                Time = "10",
-                Lang="55"
-
-            };
-
-            firestoreDb = FirestoreDb.Create("carsproject-343312");
-            DocumentReference docRef = firestoreDb.Collection("aracverileri").Document("" + model.Id+ "");
-
-            await docRef.SetAsync(model);
-     
-        }*/
+       
     }
 }
