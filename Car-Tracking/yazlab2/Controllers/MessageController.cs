@@ -15,13 +15,13 @@ namespace yazlab2.Controllers
 {
     public class MessageController : Controller
     {
-        string jsn = "./carsproject-343312-d8e6de01b9cb.json";
+        string jsn = "yourjson";
         string projeId;
         private FirestoreDb firestoreDb;
         public MessageController()
         {
             Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", jsn);
-            projeId = "carsproject-343312";
+            projeId = "projectname";
             firestoreDb = FirestoreDb.Create(projeId);
 
         }
@@ -60,7 +60,7 @@ namespace yazlab2.Controllers
 
 
 
-                firestoreDb = FirestoreDb.Create("carsproject-343312");
+                firestoreDb = FirestoreDb.Create("projectname");
                 DocumentReference docRef = firestoreDb.Collection("aracveri").Document();
 
                 await docRef.SetAsync(myModel2);
