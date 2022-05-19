@@ -1,0 +1,35 @@
+﻿@using yazlab2.Models
+@model IEnumerable<DataModel>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+
+    @if (Model.Count() > 0)
+    {
+        <hr />
+        <table cellpadding="0" cellspacing="0" border="1">
+            <tr>
+                <th>id</th>
+                <th>tarih</th>
+                <th>konum</th>
+                <th>konum2</th>
+            </tr>
+            @foreach (DataModel user in Model)
+            {
+                <tr>
+                    <td>@user.CarId</td>
+                    <td>@user.Time</td>
+                    <td>@user.Lang</td>
+                    <td>@user.Lat</td>
+                </tr>
+            }
+        </table>
+    }
+</body>
+</html>

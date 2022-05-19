@@ -1,0 +1,60 @@
+﻿@model yazlab2.Models.CarModel
+
+@{
+    var data = ViewData["id"];
+}
+
+<div class="modal-content">
+
+    <!--Modal Header Start-->
+    <div class="modal-header">
+        <h4 class="modal-title">Tarih Seç</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <!--Modal Header End-->
+
+
+
+    @using (Html.BeginForm("Check", "MapCars", FormMethod.Post))
+    {
+
+        <div class="modal-body form-horizontal">
+            
+
+            
+            <div class="col-sm-10">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Araba Id   </span>
+                    <input asp-for="CarId" />
+                </div>
+
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Başlangıç Saati   </span> 
+                    <input asp-for="Time" />
+                </div>
+               
+
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Bitiş Saati   </span>
+                    <input asp-for="Time2" />
+                </div>
+              
+
+            </div>
+            </div>
+
+
+      
+        <!--Modal Footer Start-->
+        <div class="modal-footer">
+            <button data-dismiss="modal" id="cancel" class="btn btn-default" type="button">Kapat</button>
+            <td><button type="submit" value="Submit" />Getir</td>
+
+        </div>
+    }
+    <!--Modal Footer End-->
+  
+
+</div>
+
+

@@ -1,0 +1,43 @@
+﻿@{
+
+}
+@using Microsoft.AspNetCore.Http;
+<div class="modal-content">
+
+   
+    <div class="modal-header">
+    
+    </div>
+
+    <div style="text-align:center;align-items:center;"class="modal-body form-horizontal">
+        @{ if (Context.Session.GetString("sayac") == "3")
+            {
+                <a> @Context.Session.GetString("sayac") Kere Yanlış Giriş Yaptınız.
+                     Lütfen Testi Doğrulayınız. </a>
+
+            }
+
+            else
+            {
+    <a>
+        Hatalı Kullanıcı Adı veya Şifre.
+        Tekrar Deneyiniz.
+    </a>
+            }
+
+        }
+
+    </div>
+    <div style="text-align:center;align-items:center">
+        <button type="button" style="width:100px;" onclick="location.href='@Url.Action("Error2","Login", new {id = @Context.Session.GetString("sayac") })'" class="btn btn-primary">Tamam</button>
+    </div>
+       
+
+        <div class="modal-footer">
+           
+
+        </div>
+  
+</div>
+
+
