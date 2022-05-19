@@ -41,12 +41,12 @@ namespace yazlab2.Controllers
         }
         void connectionString()
         {
-            con.ConnectionString = "Data Source=HP-YAREN; Initial Catalog=cars_app;Integrated Security=True";
+            con.ConnectionString = "connectionstring";
 
         }
         void connectionString2()
         {
-            con2.ConnectionString = "Data Source=HP-YAREN; Initial Catalog=cars_app;Integrated Security=True";
+            con2.ConnectionString = "connectionstring";
 
         }
         [HttpPost]
@@ -80,7 +80,7 @@ namespace yazlab2.Controllers
                 {
 
                     id = (int)dr2["Id"];
-                    string connection = "Data Source=HP-YAREN; Initial Catalog=cars_app;Integrated Security=True";
+                    string connection ="connectionstring";
                     using (SqlConnection sqlcon = new SqlConnection(connection))
                     {
                         string ekle = "insert into Giris_zamanlari(Kullanici_id,Giris_tarihi,Giris_saati) values('" + id + "','" + DateTime.Now + "','" + DateTime.Now.ToLongTimeString() + "')";
@@ -125,7 +125,7 @@ namespace yazlab2.Controllers
         public IActionResult Error3(int id)
         {
             var response = Request.Form["g-recaptcha-response"];
-            const string secret = "6Lfd5_IeAAAAAM9NmgTCj0OxIKinsVBpewNWEjv5";
+            const string secret = "secretkey";
             //Kendi Secret keyinizle değiştirin.
             HttpContext.Session.SetString("sayac", "0");
             var client = new WebClient();
@@ -163,7 +163,7 @@ namespace yazlab2.Controllers
 
 
 
-                string connection = "Data Source=HP-YAREN; Initial Catalog=cars_app;Integrated Security=True";
+                string connection = "connectionstring";
                 using (SqlConnection sqlcon = new SqlConnection(connection))
                 {
                     string ekle = "insert into Cikis_zamanlari(Kullanici_id,Cikis_tarihi,Cikis_saati) values('" + id2 + "','" + DateTime.Now + "','" + DateTime.Now.ToLongTimeString() + "')";
