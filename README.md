@@ -16,7 +16,7 @@ Bu projede bir araç takip sistemi yapmamız istenmiştir. Her kullanıcının s
   src="/images/1.png"
   alt="Alt text"
   title="Optional title"
-  style="display: inline-block; margin: 0 auto; width: 300px"> 
+  style="display: inline-block; margin: 0 auto; width: 500px"> 
   
   -Giriş yapıldıktan sonra, sadece kendi araçlarının konumlarını görebildiği sayfa çıkıyor. Bu sayfada son 30 dk veriler gelir.
 
@@ -25,7 +25,7 @@ Bu projede bir araç takip sistemi yapmamız istenmiştir. Her kullanıcının s
   src="/images/2.png"
   alt="Alt text"
   title="Optional title"
-  style="display: inline-block; margin: 0 auto; width: 300px"> 
+  style="display: inline-block; margin: 0 auto; width: 500px"> 
   
   -Eğer kullanıcı araçların geçmiş konumuna bakmak isterse araç seçtikten sonra bir diyalog penceresi çıkar ve zaman aralığı seçimi yapar.
   
@@ -34,7 +34,7 @@ Bu projede bir araç takip sistemi yapmamız istenmiştir. Her kullanıcının s
   src="/images/3.png"
   alt="Alt text"
   title="Optional title"
-  style="display: inline-block; margin: 0 auto; width: 300px"> 
+  style="display: inline-block; margin: 0 auto; width: 500px"> 
   
   --Kullanıcı seçim yaptıktan sonra, sadece girdiği zaman aralığındaki o aracın geçmiş verileri gelir.
   
