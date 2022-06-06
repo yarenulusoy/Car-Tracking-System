@@ -2,8 +2,11 @@
  .Net Core Mvc ile yazılmış Google Maps  ve İsveç taksi verisi kullanılarak RabbitMQ ve Firebase ile kullanıcıların araçlarının konumlarını ve saatlerini görebildiği web sitesi
 
 -Proje .NET Core Mvc dilinde gerçekleştirilmiştir.
+
 -Message broker olarak RabbitMq kullanılmıştır.
+
 -Nosql veritabanı olarak Google Firestore kullanılmıştır.
+
 -Harita işlemleri için Google Maps Api kullanılmıştır.
 
 Bu projede bir araç takip sistemi yapmamız istenmiştir. Her kullanıcının sahip olduğu araçlar vardır ve bu bilgilere dayanarak kullanıcı girişi olan, sisteme girdiğinde sadece kendi araçlarını görebilen ve araçların geçmiş konumlarını ve zaman aralığını seçip görebilen bir sistem tasarlanmıştır. 
