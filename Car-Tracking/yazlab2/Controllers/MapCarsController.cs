@@ -12,7 +12,7 @@ namespace yazlab2.Controllers
 {
     public class MapCarsController : Controller
     {
-        string jsn = "./carsproject-343312-d8e6de01b9cb.json";
+        string jsn = "yourjson";
         string projeId;
         private FirestoreDb firestoreDb;
 
@@ -20,7 +20,7 @@ namespace yazlab2.Controllers
         public MapCarsController()
         {
             Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", jsn);
-            projeId = "carsproject-343312";
+            projeId = "projectname";
             firestoreDb = FirestoreDb.Create(projeId);
 
         }
